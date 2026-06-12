@@ -4,6 +4,7 @@
 
 * Educational Framework & Design Improvements for Aphrodite’s Harvest / Learn About Bees.
 * Self Management Toolkit (Version 1 & Chapter 4)
+* Scrum Master
 
 ## Completed Work
 
