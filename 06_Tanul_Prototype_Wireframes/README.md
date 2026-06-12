@@ -1,12 +1,15 @@
 Tanul – Individual Contribution
 
-Main Contribution
+**Main Contribution**
 
 Project Management, Client Liaison, Cross-Group Program Leadership, and High-Fidelity UI/UX Wireframe Architecture & Design Specification for Aphrodite’s Harvest / Learn About Bees.
 
-Self-Management Toolkit (Comprehensive Content Editing, Quality Assurance, UX Design Specification, Competitor Insights, and Social Media Framework — Chapters 5, 6, 7 & 8)
+Self-Management Toolkit (Comprehensive Content Management, Quality Assurance, UX Design Specification, SOcial Media Strategy)
+  Individual content - Topic 8
+  Proof reading of the document
+  Content and Document Editing
 
-Completed Work
+**Completed Work**
 
 Comprehensive UX audit and live-site review of the current website to identify operational and usability bottlenecks
 
