@@ -27,8 +27,7 @@
 - Image SEO guidelines: alt text formula, file size rules, WebP format recommendations
 - WordPress/Elementor technical feasibility mapping
 - SEO testing conducted on staging site prior to live deployment ([staging2.aphroditesharvest.com.au](https://staging2.aphroditesharvest.com.au/))
-- Jira Board handling & task allocation
-- Group coordination
+- Jira Board task progress tracking
 
 ---
 
