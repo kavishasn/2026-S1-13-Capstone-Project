@@ -1,137 +1,50 @@
-# Contribution Record
+# Jiasheng Wan – Individual Contribution
 
-**Student:** Jiasheng Wan  
-**Group:** S1-13
+## Main Contribution
 
-## Overview
+- UX Audit and Website Improvement Analysis for Aphrodite’s Harvest / LearnAboutBees.
+- Competitor Website UX and Public Effectiveness Analysis.
+- Website demo design support based on UX findings and design recommendations.
 
-This contribution focuses on website usability evaluation, UX auditing, competitor benchmarking, website effectiveness analysis, and design recommendation development for the Aphrodite's Harvest and LearnAboutBees projects.
+## Completed Work
 
----
+- Reviewed the current Aphrodite’s Harvest website from a UX perspective.
+- Analysed homepage layout, navigation flow, usability issues, mobile responsiveness, and overall user experience.
+- Identified key website problems, such as unclear CTA hierarchy, repeated contact sections, navigation issues, and course-page flow confusion.
+- Created a UX findings table with issue, user impact, severity level, and recommendation.
+- Reviewed 13 competitor and reference websites related to honey products, beekeeping education, local food brands, and shop-learning platforms.
+- Built a structured scoring framework for competitor analysis.
+- Evaluated competitor websites based on UX performance and public website effectiveness.
+- Used Python to support scoring analysis, data processing, ranking charts, correlation analysis, and quadrant analysis.
+- Summarised common competitor UX problems and useful design references.
+- Proposed design directions for LearnAboutBees as a combined online shop and learning resource platform.
+- Supported the website demo direction based on the UX audit and competitor analysis findings.
 
-# Aphrodite's Harvest Website UX Audit
+## Deliverables in This Folder
 
-## Homepage Review
+- `Aphrodite’s Harvest Website UX Audit and Improvement Report.docx`  
+  UX audit report for the current Aphrodite’s Harvest website, with practical improvement recommendations.
 
-- Conducted a detailed review of the homepage layout and visual hierarchy.
-- Evaluated the effectiveness of the hero section, value proposition presentation, and CTA placement.
-- Identified visual competition issues caused by multiple competing design elements.
-- Analysed layout balance and content prominence across key homepage sections.
+- `Competitor Website UX and Public Effectiveness Analysis - Final.docx`  
+  Structured competitor analysis report covering 13 reference websites and key design directions for LearnAboutBees.
 
-## Navigation and Information Architecture Analysis
+## Technical Note
 
-- Reviewed the website's navigation structure and information architecture.
-- Evaluated navigation consistency, menu organisation, and user pathways.
-- Analysed navigation flows between homepage, events, courses, support services, shop pages, and contact pages.
-- Identified issues related to inconsistent navigation button sizing and sticky header behaviour.
+The competitor analysis was supported by Python-based data analysis.  
+Python was used to organise scoring data, calculate comparison results, generate charts, and support the correlation and quadrant analysis.
 
-## Usability Evaluation
+The website demo was built as a front-end prototype to demonstrate the proposed user interface and user flow.  
+It was developed as a practical demo based on the UX analysis results, with a focus on homepage positioning, Shop and Learn pathways, product/course visibility, booking logic, and trust-building sections.
 
-- Assessed page-level usability and interaction design.
-- Identified repeated contact sections and duplicated CTA blocks across multiple pages.
-- Evaluated CTA hierarchy and action prioritisation.
-- Analysed the course registration and purchasing workflow to identify potential user confusion.
-- Reviewed content consistency and terminology usage throughout the website.
+The demo is not a full production website or a complete backend system.  
+It is used to show how the UX findings and design recommendations can be translated into a clear website structure.
 
-## Mobile Responsiveness Assessment
+## Client Value
 
-- Conducted mobile UX evaluation across major website sections.
-- Reviewed responsiveness, readability, navigation usability, and content hierarchy on mobile devices.
-- Identified issues related to:
-  - Mobile hero section complexity
-  - Navigation density
-  - Decorative graphics affecting content visibility
-  - Repeated CTA sections
-  - Footer readability
-  - Long-form content presentation
+This work helps the client understand both the current website problems and the wider competitor landscape.
 
-## UX Findings and Recommendations
+It supports better website planning by showing what should be improved, what competitors do well, and what design problems should be avoided.
 
-- Documented usability issues with associated impact and severity levels.
-- Produced actionable recommendations for:
-  - Homepage layout improvements
-  - Navigation redesign
-  - CTA optimisation
-  - Mobile experience enhancement
-  - Information hierarchy improvements
-  - User journey clarification
+For LearnAboutBees, the work provides a clear direction for building a website that combines product shopping and beekeeping learning resources.
 
-### Deliverable
-
-- Aphrodite's Harvest Website UX Audit and Improvement Report
-
----
-
-# LearnAboutBees Competitor Website Analysis
-
-## Competitor Research and Benchmarking
-
-- Identified and selected 13 competitor and reference websites within the honey, beekeeping, education, local food, and e-commerce sectors.
-- Conducted comparative analysis of:
-  - Homepage design
-  - Navigation systems
-  - User flows
-  - Learning resource presentation
-  - Product and service presentation
-  - Mobile usability
-  - Trust-building mechanisms
-- Documented industry practices, strengths, weaknesses, and benchmark examples.
-
-## UX Evaluation Framework Development
-
-- Designed a structured UX evaluation framework for competitor assessment.
-- Defined evaluation criteria covering:
-  - Homepage Clarity
-  - Navigation
-  - User Flow
-  - Call-to-Action Design
-  - Learning Resource Findability
-  - Product and Service Findability
-  - Mobile UX
-  - UI Consistency
-  - Readability
-  - Trust Elements
-  - Contact Accessibility
-- Established a consistent scoring methodology for cross-website comparison.
-
-## Website Effectiveness Assessment
-
-- Developed a website effectiveness evaluation framework based on publicly available indicators.
-- Collected and analysed:
-  - PageSpeed Insights metrics
-  - Accessibility scores
-  - SEO performance indicators
-  - Search visibility metrics
-  - Social proof indicators
-  - Public trust signals
-  - Contact accessibility information
-
-## Data Analysis
-
-- Conducted competitor website ranking analysis.
-- Performed functional classification of reviewed websites.
-- Completed descriptive statistical analysis.
-- Produced UX versus Website Effectiveness quadrant analysis.
-- Conducted correlation analysis between UX dimensions and effectiveness indicators.
-- Identified common usability weaknesses and recurring design patterns across competitors.
-
-## Design Recommendations for LearnAboutBees
-
-- Developed evidence-based recommendations informed by competitor findings.
-- Defined strategic priorities for:
-  - Shop and Learn information architecture
-  - Homepage positioning
-  - Learning resource organisation
-  - E-commerce user flow optimisation
-  - Trust-building mechanisms
-  - Mobile-first design
-  - Website effectiveness and SEO considerations
-
-### Deliverables
-
-- Competitor Website UX and Public Effectiveness Analysis Report
-- Competitor Evaluation Framework and Scoring Methodology
-- Website Effectiveness Assessment Framework
-- Competitor Benchmarking Analysis
-- LearnAboutBees Design Recommendations
-- LearnAboutBees Website Demonstration Prototype (developed based on competitor analysis findings and UX recommendations)
+The final recommendations can help improve user clarity, navigation, trust, product discovery, learning structure, and mobile experience.
