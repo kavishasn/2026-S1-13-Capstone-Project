@@ -1,4 +1,4 @@
-# Nathan Njonge-Nathan – Individual Contribution
+# Nathan Waithaka – Individual Contribution
 
 ---
 
