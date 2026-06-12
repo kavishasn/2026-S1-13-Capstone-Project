@@ -4,10 +4,7 @@ Tanul – Individual Contribution
 
 Project Management, Client Liaison, Cross-Group Program Leadership, and High-Fidelity UI/UX Wireframe Architecture & Design Specification for Aphrodite’s Harvest / Learn About Bees.
 
-Self-Management Toolkit (Comprehensive Content Management, Quality Assurance, UX Design Specification, SOcial Media Strategy)
-  Individual content - Topic 8
-  Proof reading of the document
-  Content and Document Editing
+Self-Management Toolkit (Chapter 8 & Formatting )
 
 **Completed Work**
 
@@ -50,8 +47,6 @@ Presentation Master: Oversaw visual formatting, structural flow, and timing cons
 Structured project responsibilities and task allocation based on team member strengths and Belbin profiles.
 
 Deliverables in This Folder
-
-Comprehensive Edited Master Copy: Self-Management Toolkit (Version 2)
 
 Interactive Figma Workspace Link (Containing both Desktop and Mobile responsive wireframes)
 
