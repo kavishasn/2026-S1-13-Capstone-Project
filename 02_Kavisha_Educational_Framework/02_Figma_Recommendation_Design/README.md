@@ -33,6 +33,6 @@ The design supports:
 
 These Figma screens were used as the design base for the static HTML mockup located in:
 
-`../03_Static_HTML_Mockup/`
+[`../03_Static_HTML_Mockup/`](https://github.com/kavishasn/2026-S1-13-Capstone-Project/blob/main/02_Kavisha_Educational_Framework/aphrodites_harvest_mockup.html)
 
 The HTML mockup demonstrates how the Figma recommendations can appear in a website-style prototype.
