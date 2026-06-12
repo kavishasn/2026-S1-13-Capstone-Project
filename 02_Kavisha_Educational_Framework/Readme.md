@@ -2,12 +2,14 @@
 
 ## Main Contribution
 
-Educational Framework for Aphrodite’s Harvest / Learn About Bees.
+Educational Framework & Design Improvements for Aphrodite’s Harvest / Learn About Bees.
+Self Management Toolkit
 
 ## Completed Work
 
 * Live-site bottleneck analysis for Courses, Support, Events, and Contact areas
 * Four-level learning structure: Beginner, Intermediate, Specialist, Advanced
+* Proposed Information Architecture Structure
 * Educational Framework Improvement Report
 * Figma design concept for the learning pathway
 * Static HTML prototype mockup
