@@ -1,1 +1,3 @@
-
+- Worked on the SEO Implementation guide for Aphrodite`s and Learn About Bees website
+- Folder contains detailed documentation of the analysis done and proposed solution.
+- Technical testing of the solution was done on this staging site https://staging2.aphroditesharvest.com.au/
