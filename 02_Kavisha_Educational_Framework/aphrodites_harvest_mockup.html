@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aphrodite's Harvest — Learn About Bees</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  /* ── VARIABLES ───────────────────────────────────────────────── */
+  :root {
+    --gold:        #F5A623;
+    --amber:       #FFC72C;
+    --deep-amber:  #E08A00;
+    --honey-dark:  #B86A00;
+    --honey-light: #FFF8E7;
+    --honey-pale:  #FFFDF5;
+    --beeswax:     #3E2000;
+    --mid-brown:   #7B4F1E;
+    --cream:       #FAF3E0;
+    --teal:        #1A6B5A;
+    --teal-light:  #E8F5F1;
+    --white:       #FFFFFF;
+    --gray-light:  #F5F0E8;
+    --gray-mid:    #B8A898;
+    --shadow-sm:   0 2px 8px rgba(62,32,0,0.10);
+    --shadow-md:   0 6px 24px rgba(62,32,0,0.13);
+    --shadow-lg:   0 16px 48px rgba(62,32,0,0.16);
+    --radius:      12px;
+    --radius-lg:   20px;
+  }
+
+  /* ── RESET ───────────────────────────────────────────────────── */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--honey-pale);
+    color: var(--beeswax);
+    line-height: 1.65;
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ─────────────────────────────────────────────────────── */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: var(--white);
+    border-bottom: 3px solid var(--amber);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 48px;
+    height: 68px;
+    box-shadow: var(--shadow-sm);
+  }
+  .nav-logo {
+    display: flex; align-items: center; gap: 10px;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem; font-weight: 700;
+    color: var(--beeswax);
+    text-decoration: none;
+  }
+  .nav-logo .bee { font-size: 1.5rem; }
+  .nav-links { display: flex; gap: 6px; }
+  .nav-links a {
+    padding: 6px 14px; border-radius: 6px;
+    font-size: 0.88rem; font-weight: 500;
+    color: var(--mid-brown); text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+  }
+  .nav-links a:hover { background: var(--honey-light); color: var(--honey-dark); }
+  .nav-links a.active { background: var(--amber); color: var(--white); }
+  .nav-cta {
+    background: var(--beeswax); color: var(--amber);
+    padding: 9px 20px; border-radius: 8px;
+    font-size: 0.88rem; font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  .nav-cta:hover { background: var(--mid-brown); }
+
+  /* ── PAGE LABEL ──────────────────────────────────────────────── */
+  .page-label {
+    background: var(--amber);
+    text-align: center;
+    padding: 8px 20px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--beeswax);
+  }
+
+  /* ── HERO ────────────────────────────────────────────────────── */
+  .hero {
+    background: linear-gradient(135deg, var(--beeswax) 0%, #5C3200 55%, #7B4F1E 100%);
+    color: var(--white);
+    padding: 72px 48px 64px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 80% 50%, rgba(255,199,44,0.18) 0%, transparent 60%);
+  }
+  .hero-inner {
+    max-width: 900px; margin: 0 auto;
+    position: relative; z-index: 1;
+  }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(255,199,44,0.18);
+    border: 1px solid rgba(255,199,44,0.4);
+    border-radius: 999px;
+    padding: 5px 16px;
+    font-size: 0.78rem; font-weight: 600;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 24px;
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 900; line-height: 1.15;
+    color: var(--white);
+    margin-bottom: 16px;
+  }
+  .hero h1 span { color: var(--amber); }
+  .hero p {
+    font-size: 1.05rem; font-weight: 300;
+    color: rgba(255,255,255,0.75);
+    max-width: 560px; margin-bottom: 36px;
+  }
+  .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--amber); color: var(--beeswax);
+    padding: 12px 28px; border-radius: 8px;
+    font-weight: 700; font-size: 0.92rem;
+    text-decoration: none; display: inline-block;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 16px rgba(255,199,44,0.35);
+  }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(255,199,44,0.45); }
+  .btn-ghost {
+    background: transparent; color: rgba(255,255,255,0.85);
+    padding: 12px 28px; border-radius: 8px;
+    font-weight: 500; font-size: 0.92rem;
+    text-decoration: none; display: inline-block;
+    border: 1.5px solid rgba(255,255,255,0.3);
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .btn-ghost:hover { border-color: var(--amber); color: var(--amber); }
+
+  /* ── PROGRESS BAR ────────────────────────────────────────────── */
+  .progress-bar {
+    background: var(--white);
+    border-bottom: 1px solid #EDE0CC;
+    padding: 0 48px;
+  }
+  .progress-inner {
+    max-width: 900px; margin: 0 auto;
+    display: flex; align-items: center;
+    padding: 16px 0;
+    gap: 0;
+  }
+  .progress-step {
+    display: flex; flex-direction: column; align-items: center;
+    gap: 4px; flex: 1; position: relative;
+  }
+  .progress-step:not(:last-child)::after {
+    content: '';
+    position: absolute; top: 14px; left: 60%; width: 80%;
+    height: 2px; background: #EDE0CC;
+    z-index: 0;
+  }
+  .progress-step.done:not(:last-child)::after { background: var(--amber); }
+  .step-dot {
+    width: 28px; height: 28px; border-radius: 50%;
+    border: 2px solid #EDE0CC;
+    background: var(--white);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.72rem; font-weight: 700;
+    color: var(--gray-mid);
+    position: relative; z-index: 1;
+    transition: all 0.2s;
+  }
+  .progress-step.active .step-dot { background: var(--amber); border-color: var(--amber); color: var(--white); box-shadow: 0 0 0 4px rgba(255,199,44,0.25); }
+  .progress-step.done .step-dot { background: var(--gold); border-color: var(--gold); color: var(--white); }
+  .step-label { font-size: 0.72rem; color: var(--gray-mid); font-weight: 500; }
+  .progress-step.active .step-label, .progress-step.done .step-label { color: var(--honey-dark); font-weight: 600; }
+
+  /* ── SECTION WRAPPER ─────────────────────────────────────────── */
+  .section { padding: 48px 48px; max-width: 1000px; margin: 0 auto; }
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem; font-weight: 700;
+    color: var(--beeswax);
+    margin-bottom: 6px;
+  }
+  .section-subtitle {
+    font-size: 0.9rem; color: var(--mid-brown);
+    margin-bottom: 28px;
+  }
+
+  /* ── IMPROVEMENT BANNER ──────────────────────────────────────── */
+  .improvement-banner {
+    background: linear-gradient(90deg, var(--honey-light) 0%, var(--white) 100%);
+    border-left: 4px solid var(--gold);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    padding: 14px 20px;
+    margin-bottom: 28px;
+    font-size: 0.85rem; color: var(--mid-brown);
+    display: flex; align-items: center; gap: 10px;
+  }
+  .improvement-banner strong { color: var(--honey-dark); }
+
+  /* ── LEVEL SELECTOR ──────────────────────────────────────────── */
+  .level-selector { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 36px; }
+  .level-card {
+    border-radius: var(--radius);
+    padding: 20px 16px;
+    cursor: pointer;
+    border: 2.5px solid transparent;
+    transition: all 0.22s cubic-bezier(0.34,1.56,0.64,1);
+    position: relative; overflow: hidden;
+    text-align: center;
+  }
+  .level-card::before {
+    content: ''; position: absolute; inset: 0;
+    opacity: 0; transition: opacity 0.2s;
+    background: rgba(255,255,255,0.12);
+  }
+  .level-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+  .level-card:hover::before { opacity: 1; }
+  .level-card.selected { border-color: var(--white); box-shadow: 0 0 0 3px var(--amber), var(--shadow-md); transform: translateY(-4px); }
+  .level-card.l1 { background: linear-gradient(135deg, #FFC72C, #F5A623); }
+  .level-card.l2 { background: linear-gradient(135deg, #F5A623, #E08A00); }
+  .level-card.l3 { background: linear-gradient(135deg, #E08A00, #B86A00); }
+  .level-card.l4 { background: linear-gradient(135deg, #7B4F1E, #3E2000); }
+  .level-num { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.75); margin-bottom: 4px; }
+  .level-name { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 700; color: var(--white); margin-bottom: 4px; }
+  .level-desc { font-size: 0.75rem; color: rgba(255,255,255,0.8); line-height: 1.4; }
+  .level-count { display: inline-block; margin-top: 10px; background: rgba(255,255,255,0.25); border-radius: 999px; padding: 2px 10px; font-size: 0.72rem; font-weight: 600; color: var(--white); }
+
+  /* ── SECTION DIVIDERS ────────────────────────────────────────── */
+  .grid-section-label {
+    display: flex; align-items: center; gap: 12px;
+    margin: 32px 0 18px;
+  }
+  .grid-section-label span {
+    font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--mid-brown);
+    white-space: nowrap;
+  }
+  .grid-section-label::after {
+    content: ''; flex: 1; height: 1.5px;
+    background: linear-gradient(90deg, #EDE0CC, transparent);
+  }
+
+  /* ── PRODUCT GRID ────────────────────────────────────────────── */
+  .product-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 12px; }
+  .product-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    border: 1.5px solid #EDE0CC;
+    overflow: hidden;
+    transition: transform 0.22s, box-shadow 0.22s, border-color 0.22s;
+    cursor: pointer;
+  }
+  .product-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--amber); }
+  .product-img {
+    width: 100%; height: 140px;
+    background: linear-gradient(135deg, var(--honey-light), #EDE0CC);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 2.5rem;
+    position: relative;
+  }
+  .product-img .level-badge {
+    position: absolute; top: 10px; left: 10px;
+    background: var(--amber); color: var(--white);
+    font-size: 0.68rem; font-weight: 700; letter-spacing: 0.06em;
+    text-transform: uppercase; padding: 3px 9px; border-radius: 999px;
+  }
+  .product-img .format-badge {
+    position: absolute; top: 10px; right: 10px;
+    background: var(--beeswax); color: var(--amber);
+    font-size: 0.68rem; font-weight: 600;
+    padding: 3px 9px; border-radius: 999px;
+  }
+  .product-body { padding: 18px 18px 14px; }
+  .product-category { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
+  .product-name { font-family: 'DM Serif Display', serif; font-size: 1rem; font-weight: 400; color: var(--beeswax); margin-bottom: 6px; line-height: 1.35; }
+  .product-desc { font-size: 0.8rem; color: var(--mid-brown); line-height: 1.5; margin-bottom: 12px; }
+  .product-meta { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
+  .meta-tag {
+    background: var(--honey-light); color: var(--honey-dark);
+    font-size: 0.7rem; font-weight: 500; padding: 3px 9px; border-radius: 999px;
+  }
+  .product-footer {
+    display: flex; align-items: center; justify-content: space-between;
+    padding-top: 12px; border-top: 1px solid #F0E8D8;
+  }
+  .product-price { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700; color: var(--beeswax); }
+  .product-price span { font-size: 0.75rem; font-weight: 400; color: var(--gray-mid); font-family: 'DM Sans', sans-serif; }
+  .btn-buy {
+    background: var(--amber); color: var(--beeswax);
+    border: none; border-radius: 7px;
+    padding: 8px 16px; font-size: 0.8rem; font-weight: 700;
+    cursor: pointer; transition: background 0.2s, transform 0.15s;
+  }
+  .btn-buy:hover { background: var(--gold); transform: scale(1.04); }
+
+  /* ── SUPPORT TIP ─────────────────────────────────────────────── */
+  .support-tip {
+    background: var(--teal-light);
+    border: 1.5px solid rgba(26,107,90,0.25);
+    border-left: 4px solid var(--teal);
+    border-radius: var(--radius);
+    padding: 10px 14px;
+    display: flex; align-items: flex-start; gap: 9px;
+    margin-top: 8px;
+  }
+  .support-tip .tip-icon { font-size: 0.95rem; flex-shrink: 0; margin-top: 1px; }
+  .support-tip .tip-text { font-size: 0.76rem; color: var(--teal); line-height: 1.45; }
+  .support-tip .tip-text strong { font-weight: 600; }
+  .tip-link { color: var(--teal); font-weight: 600; text-decoration: underline; text-underline-offset: 2px; cursor: pointer; }
+
+  /* ── SUPPORT SERVICES GRID ───────────────────────────────────── */
+  .support-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .support-card {
+    background: var(--white);
+    border: 1.5px solid #EDE0CC;
+    border-radius: var(--radius);
+    padding: 22px 18px;
+    transition: all 0.2s;
+    cursor: pointer;
+    position: relative;
+  }
+  .support-card:hover { border-color: var(--teal); box-shadow: 0 4px 16px rgba(26,107,90,0.12); transform: translateY(-3px); }
+  .support-card .s-icon { font-size: 1.8rem; margin-bottom: 10px; }
+  .support-card .s-name { font-family: 'DM Serif Display', serif; font-size: 0.98rem; color: var(--beeswax); margin-bottom: 5px; }
+  .support-card .s-desc { font-size: 0.78rem; color: var(--mid-brown); line-height: 1.5; margin-bottom: 12px; }
+  .support-card .s-price { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; color: var(--teal); }
+  .discount-badge {
+    position: absolute; top: 12px; right: 12px;
+    background: var(--teal); color: var(--white);
+    font-size: 0.65rem; font-weight: 700; letter-spacing: 0.06em;
+    text-transform: uppercase; padding: 3px 8px; border-radius: 999px;
+  }
+
+  /* ── BUNDLE CALLOUT ──────────────────────────────────────────── */
+  .bundle-callout {
+    background: linear-gradient(135deg, var(--beeswax), #5C3200);
+    border-radius: var(--radius-lg);
+    padding: 24px 28px;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 20px; margin: 28px 0;
+    position: relative; overflow: hidden;
+  }
+  .bundle-callout::after {
+    content: '🍯';
+    position: absolute; right: 100px; top: -10px;
+    font-size: 5rem; opacity: 0.08;
+  }
+  .bundle-callout .bc-text h3 { font-family: 'Playfair Display', serif; font-size: 1.15rem; color: var(--amber); margin-bottom: 4px; }
+  .bundle-callout .bc-text p { font-size: 0.82rem; color: rgba(255,255,255,0.7); }
+  .bundle-callout .bc-price { text-align: right; }
+  .bundle-callout .bc-price .was { font-size: 0.8rem; color: rgba(255,255,255,0.4); text-decoration: line-through; }
+  .bundle-callout .bc-price .now { font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 700; color: var(--amber); }
+  .bundle-callout .btn-primary { white-space: nowrap; }
+
+  /* ── EVENTS SECTION ──────────────────────────────────────────── */
+  .event-card {
+    background: var(--white);
+    border: 1.5px solid #EDE0CC;
+    border-radius: var(--radius-lg);
+    padding: 28px;
+    display: flex; gap: 24px; align-items: flex-start;
+    transition: all 0.2s;
+  }
+  .event-card:hover { border-color: var(--amber); box-shadow: var(--shadow-md); }
+  .event-date-block {
+    background: var(--amber);
+    border-radius: 10px; min-width: 68px;
+    padding: 10px 8px; text-align: center; flex-shrink: 0;
+  }
+  .event-date-block .month { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--beeswax); }
+  .event-date-block .day { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 900; color: var(--beeswax); line-height: 1; }
+  .event-date-block .year { font-size: 0.65rem; color: var(--beeswax); opacity: 0.7; }
+  .event-body { flex: 1; }
+  .event-tag { display: inline-block; background: var(--honey-light); color: var(--honey-dark); font-size: 0.7rem; font-weight: 600; padding: 3px 10px; border-radius: 999px; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 8px; }
+  .event-body h3 { font-family: 'DM Serif Display', serif; font-size: 1.15rem; color: var(--beeswax); margin-bottom: 6px; }
+  .event-body p { font-size: 0.83rem; color: var(--mid-brown); line-height: 1.6; margin-bottom: 14px; }
+  .event-meta { display: flex; gap: 16px; flex-wrap: wrap; }
+  .event-meta span { font-size: 0.75rem; color: var(--mid-brown); display: flex; align-items: center; gap: 5px; }
+  .event-level-tag { font-size: 0.72rem; font-weight: 600; background: #FFF3C4; color: var(--honey-dark); padding: 3px 9px; border-radius: 999px; margin-left: auto; }
+
+  /* ── COMPLETION SCREEN ───────────────────────────────────────── */
+  .completion-screen {
+    background: linear-gradient(135deg, #FFFDF5, #FFF8E7);
+    border: 2px dashed var(--amber);
+    border-radius: var(--radius-lg);
+    padding: 48px 36px; text-align: center;
+  }
+  .completion-icon { font-size: 4rem; margin-bottom: 16px; }
+  .completion-screen h2 { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 900; color: var(--beeswax); margin-bottom: 8px; }
+  .completion-screen p { font-size: 0.92rem; color: var(--mid-brown); margin-bottom: 28px; }
+  .next-courses { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 28px; }
+  .next-course-card {
+    border-radius: var(--radius);
+    padding: 18px; text-align: left;
+    border: 2px solid transparent; cursor: pointer; transition: all 0.2s;
+  }
+  .next-course-card.recommended { background: var(--amber); border-color: var(--amber); }
+  .next-course-card.optional { background: var(--white); border-color: #EDE0CC; }
+  .next-course-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-sm); }
+  .next-course-card .nc-tag { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px; }
+  .next-course-card.recommended .nc-tag { color: rgba(62,32,0,0.6); }
+  .next-course-card.optional .nc-tag { color: var(--gold); }
+  .next-course-card .nc-name { font-family: 'DM Serif Display', serif; font-size: 0.98rem; }
+  .next-course-card.recommended .nc-name { color: var(--beeswax); }
+  .next-course-card.optional .nc-name { color: var(--beeswax); }
+  .apply-section h4 { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--mid-brown); margin-bottom: 14px; }
+  .apply-grid { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-bottom: 20px; }
+  .apply-chip {
+    background: var(--white); border: 1.5px solid #EDE0CC;
+    border-radius: var(--radius); padding: 10px 18px;
+    font-size: 0.82rem; font-weight: 500; color: var(--mid-brown);
+    cursor: pointer; transition: all 0.2s;
+    display: flex; align-items: center; gap: 7px;
+  }
+  .apply-chip:hover { border-color: var(--amber); color: var(--beeswax); background: var(--honey-light); }
+  .review-prompt {
+    background: var(--honey-light); border-radius: var(--radius);
+    padding: 14px 20px; display: inline-flex; align-items: center; gap: 10px;
+    font-size: 0.83rem; color: var(--honey-dark); font-weight: 500;
+    cursor: pointer; transition: background 0.2s;
+    border: 1px solid rgba(245,166,35,0.3);
+  }
+  .review-prompt:hover { background: #FFE9A0; }
+  .review-prompt strong { color: var(--honey-dark); }
+
+  /* ── FEEDBACK FORM ───────────────────────────────────────────── */
+  .feedback-section {
+    background: var(--white);
+    border-top: 3px solid var(--amber);
+    padding: 48px;
+  }
+  .feedback-inner { max-width: 640px; margin: 0 auto; }
+  .feedback-inner h2 { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 700; color: var(--beeswax); margin-bottom: 6px; }
+  .feedback-inner .sub { font-size: 0.88rem; color: var(--mid-brown); margin-bottom: 28px; }
+  .form-group { margin-bottom: 18px; }
+  .form-group label { display: block; font-size: 0.8rem; font-weight: 600; color: var(--beeswax); margin-bottom: 6px; }
+  .form-group input, .form-group select, .form-group textarea {
+    width: 100%; padding: 11px 14px;
+    border: 1.5px solid #EDE0CC; border-radius: 8px;
+    font-family: 'DM Sans', sans-serif; font-size: 0.88rem; color: var(--beeswax);
+    background: var(--honey-pale); transition: border-color 0.2s;
+    outline: none;
+  }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--amber); background: var(--white); }
+  .form-group select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%237B4F1E' stroke-width='1.5' fill='none'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 36px; }
+  .form-group textarea { resize: vertical; min-height: 90px; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .enquiry-highlight {
+    background: var(--honey-light); border: 1.5px solid var(--amber);
+    border-radius: 8px; padding: 12px 14px; margin-bottom: 18px;
+    font-size: 0.78rem; color: var(--honey-dark); display: flex; align-items: center; gap: 8px;
+  }
+  .btn-submit {
+    width: 100%; background: var(--beeswax); color: var(--amber);
+    border: none; border-radius: 8px; padding: 13px;
+    font-family: 'DM Sans', sans-serif; font-size: 0.92rem; font-weight: 700;
+    cursor: pointer; transition: background 0.2s;
+  }
+  .btn-submit:hover { background: var(--mid-brown); }
+
+  /* ── FOOTER ──────────────────────────────────────────────────── */
+  footer {
+    background: var(--beeswax); color: rgba(255,255,255,0.6);
+    padding: 28px 48px; text-align: center; font-size: 0.8rem;
+  }
+  footer a { color: var(--amber); text-decoration: none; }
+
+  /* ── SCREEN LABELS ───────────────────────────────────────────── */
+  .screen-divider {
+    text-align: center; padding: 40px 48px 8px;
+    font-size: 0.72rem; font-weight: 700; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--gray-mid);
+    display: flex; align-items: center; gap: 16px; justify-content: center;
+    max-width: 1000px; margin: 0 auto;
+  }
+  .screen-divider::before, .screen-divider::after { content: ''; flex: 1; height: 1px; background: #EDE0CC; }
+
+  .screen-block { background: var(--honey-pale); padding-bottom: 0; }
+  .screen-block + .screen-block { border-top: 6px solid var(--amber); }
+</style>
+</head>
+<body>
+
+<!-- ── NAV ───────────────────────────────────────────────────────── -->
+<nav>
+  <a href="#" class="nav-logo">
+    <span class="bee">🐝</span>
+    <span>Aphrodite's Harvest</span>
+  </a>
+  <div class="nav-links">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Events</a>
+    <a href="#courses" class="active">Courses</a>
+    <a href="#support">Support</a>
+    <a href="#">Shop</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <a href="tel:0403944603" class="nav-cta">📞 0403 944 603</a>
+</nav>
+
+<!-- ════════════════════════════════════════════════════════════════
+     SCREEN 1 — HOME / LEARNING PATH
+═════════════════════════════════════════════════════════════════ -->
+<div class="screen-block">
+  <div class="page-label">📐 Screen 1 — Home &amp; Learning Path (Improved)</div>
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="hero-badge">🐝 Adelaide's Beekeeping School</div>
+      <h1>Your <span>Beekeeping Journey</span><br>Starts Here</h1>
+      <p>Expert-led courses, hands-on mentoring, and a structured path from your first hive to advanced apiary management — right here in Adelaide.</p>
+      <div class="hero-btns">
+        <a href="#courses" class="btn-primary">Browse Courses</a>
+        <a href="#support" class="btn-ghost">One-on-One Support</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="progress-bar">
+    <div class="progress-inner">
+      <div class="progress-step done"><div class="step-dot">✓</div><div class="step-label">Browse</div></div>
+      <div class="progress-step active"><div class="step-dot">2</div><div class="step-label">Select</div></div>
+      <div class="progress-step"><div class="step-dot">3</div><div class="step-label">Learn</div></div>
+      <div class="progress-step"><div class="step-dot">4</div><div class="step-label">Complete</div></div>
+      <div class="progress-step"><div class="step-dot">5</div><div class="step-label">Continue</div></div>
+    </div>
+  </div>
+
+  <!-- Courses Section -->
+  <div class="section" id="courses">
+    <div class="improvement-banner">
+      ✨ <span><strong>Improvement #1</strong> — Level Selector Banner: filters the course grid below by your experience level. Previously, all products were shown as an undifferentiated flat list.</span>
+    </div>
+
+    <div class="section-title">Beekeeping Courses</div>
+    <div class="section-subtitle">Select your experience level to see the right courses for you</div>
+
+    <!-- Level Selector -->
+    <div class="level-selector">
+      <div class="level-card l1 selected" onclick="selectLevel(this)">
+        <div class="level-num">Level 1</div>
+        <div class="level-name">Beginner</div>
+        <div class="level-desc">New to bees? Start with the essentials</div>
+        <div class="level-count">1 course</div>
+      </div>
+      <div class="level-card l2" onclick="selectLevel(this)">
+        <div class="level-num">Level 2</div>
+        <div class="level-name">Intermediate</div>
+        <div class="level-desc">Have a hive — manage it through the seasons</div>
+        <div class="level-count">1 course</div>
+      </div>
+      <div class="level-card l3" onclick="selectLevel(this)">
+        <div class="level-num">Level 3</div>
+        <div class="level-name">Specialist</div>
+        <div class="level-desc">Tackle Varroa &amp; pest management</div>
+        <div class="level-count">2 courses</div>
+      </div>
+      <div class="level-card l4" onclick="selectLevel(this)">
+        <div class="level-num">Level 4</div>
+        <div class="level-name">Advanced</div>
+        <div class="level-desc">Deepen expertise with mentoring bundles</div>
+        <div class="level-count">1 course</div>
+      </div>
+    </div>
+
+    <!-- Improvement #2: Section Headings -->
+    <div class="improvement-banner">
+      ✨ <span><strong>Improvement #2</strong> — Section Headings: Courses and Support Services are now visually separated. Previously they were mixed in the same grid, causing decision confusion.</span>
+    </div>
+
+    <!-- Courses -->
+    <div class="grid-section-label">
+      <span>📚 Courses — Structured Learning</span>
+    </div>
+    <div class="product-grid">
+
+      <!-- Card 1 -->
+      <div class="product-card">
+        <div class="product-img" style="background: linear-gradient(135deg,#FFF3C4,#FFD97D);">
+          🐝
+          <span class="level-badge">Level 1</span>
+          <span class="format-badge">In-Person</span>
+        </div>
+        <div class="product-body">
+          <div class="product-category">Beginner Course</div>
+          <div class="product-name">Beekeeping Essentials</div>
+          <!-- Improvement #6 -->
+          <div class="product-desc">For complete beginners · Covers bee biology, hive setup &amp; basic equipment. Jan–Apr 2026.</div>
+          <div class="product-meta">
+            <span class="meta-tag">📅 Jan–Apr 2026</span>
+            <span class="meta-tag">⏱ 4 sessions</span>
+            <span class="meta-tag">👤 Beginner</span>
+          </div>
+          <div class="product-footer">
+            <div class="product-price">$69 <span>/ course</span></div>
+            <button class="btn-buy">Enrol Now</button>
+          </div>
+        </div>
+        <!-- Improvement #3: Support Tip -->
+        <div style="padding: 0 18px 16px;">
+          <div class="support-tip">
+            <span class="tip-icon">🌿</span>
+            <div class="tip-text"><strong>After this course,</strong> consider booking a <span class="tip-link">Mentoring at Your Apiary</span> session to apply what you've learned hands-on.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="product-card">
+        <div class="product-img" style="background: linear-gradient(135deg,#FFE4A0,#F5A623);">
+          🌸
+          <span class="level-badge" style="background:var(--gold)">Level 2</span>
+          <span class="format-badge">In-Person</span>
+        </div>
+        <div class="product-body">
+          <div class="product-category">Intermediate Course</div>
+          <div class="product-name">Seasonal Hive Management — Spring &amp; Summer</div>
+          <div class="product-desc">For hive owners · Practical care routines across spring &amp; summer seasons. Jan–Apr 2026.</div>
+          <div class="product-meta">
+            <span class="meta-tag">📅 Jan–Apr 2026</span>
+            <span class="meta-tag">⏱ 3 sessions</span>
+            <span class="meta-tag">👤 Intermediate</span>
+          </div>
+          <div class="product-footer">
+            <div class="product-price">$159 <span>/ course</span></div>
+            <button class="btn-buy">Enrol Now</button>
+          </div>
+        </div>
+        <div style="padding: 0 18px 16px;">
+          <div class="support-tip">
+            <span class="tip-icon">🌿</span>
+            <div class="tip-text"><strong>Recommended next:</strong> Book a <span class="tip-link">1-Hr Apiary Consultation</span> to put seasonal management into practice at your own hive.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="product-card">
+        <div class="product-img" style="background: linear-gradient(135deg,#F5C07A,#E08A00);">
+          🔬
+          <span class="level-badge" style="background:#B86A00">Level 3</span>
+          <span class="format-badge">Monthly</span>
+        </div>
+        <div class="product-body">
+          <div class="product-category">Specialist Course</div>
+          <div class="product-name">Getting to Grips with Varroa — Monthly Saturdays</div>
+          <div class="product-desc">For SA beekeepers · Varroa mite identification, treatment &amp; biosecurity. Runs seasonally.</div>
+          <div class="product-meta">
+            <span class="meta-tag">📅 Monthly Saturdays</span>
+            <span class="meta-tag">⚠️ SA Critical</span>
+            <span class="meta-tag">👤 Specialist</span>
+          </div>
+          <div class="product-footer">
+            <div class="product-price">$129 <span>/ course</span></div>
+            <button class="btn-buy">Enrol Now</button>
+          </div>
+        </div>
+        <div style="padding: 0 18px 16px;">
+          <div class="support-tip">
+            <span class="tip-icon">⚠️</span>
+            <div class="tip-text"><strong>Important:</strong> For real-world Varroa treatment decisions, always consult a professional. <span class="tip-link">Book a Varroa Mite Inspection →</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Support Services Section -->
+    <div class="grid-section-label" style="margin-top:36px;">
+      <span>🤝 Support Services — Personalised One-on-One Help</span>
+    </div>
+
+    <!-- Bundle Callout — Improvement #7 -->
+    <div class="bundle-callout">
+      <div class="bc-text">
+        <h3>💡 Book 5 Sessions & Save 10%</h3>
+        <p>The Mentoring Mini Bundle gives you five personalised support sessions at a discounted rate — perfect for ongoing hive development.</p>
+      </div>
+      <div class="bc-price">
+        <div class="was">$275 individually</div>
+        <div class="now">$270</div>
+      </div>
+      <a href="#" class="btn-primary">View Bundle</a>
+    </div>
+
+    <div class="support-grid" id="support">
+      <div class="support-card">
+        <div class="s-icon">🏡</div>
+        <div class="s-name">Mentoring at Your Apiary</div>
+        <div class="s-desc">Hands-on guidance at your hive. Perfect after completing any course to apply learning in your own environment.</div>
+        <div class="s-price">$99 / session</div>
+      </div>
+      <div class="support-card">
+        <div class="s-icon">📞</div>
+        <div class="s-name">Phone Consultation</div>
+        <div class="s-desc">Expert advice wherever you are. One-hour sessions tailored to your specific questions and challenges.</div>
+        <div class="s-price">$65 / hour</div>
+      </div>
+      <div class="support-card">
+        <div class="discount-badge">10% off × 5</div>
+        <div class="s-icon">📦</div>
+        <div class="s-name">Mentoring Mini Bundle</div>
+        <div class="s-desc">Five tailored support sessions for consistent growth. Best value for beekeepers building confidence across a season.</div>
+        <div class="s-price">$270 bundle</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════════════════════════════
+     SCREEN 2 — COURSE / LESSON VIEW
+═════════════════════════════════════════════════════════════════ -->
+<div class="screen-block" style="border-top: 6px solid var(--amber);">
+  <div class="page-label">📐 Screen 2 — Course &amp; Lesson View (Improved)</div>
+
+  <div style="display:grid; grid-template-columns: 260px 1fr; min-height:520px; max-width:1000px; margin:0 auto; border-top:1px solid #EDE0CC;">
+
+    <!-- Sidebar -->
+    <div style="background:var(--white); border-right:1.5px solid #EDE0CC; padding:28px 20px;">
+      <div style="font-size:0.72rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--gold); margin-bottom:16px;">Course Progress</div>
+
+      <!-- Module List -->
+      <div style="display:flex;flex-direction:column;gap:6px;">
+        <!-- Completed -->
+        <div style="display:flex;align-items:center;gap:10px;padding:10px 12px;background:var(--honey-light);border-radius:8px;border-left:3px solid var(--gold);">
+          <span style="font-size:1rem;">✅</span>
+          <div>
+            <div style="font-size:0.78rem;font-weight:600;color:var(--beeswax);">Module 1: Bee Biology</div>
+            <div style="font-size:0.68rem;color:var(--gray-mid);">3 lessons · Complete</div>
+          </div>
+        </div>
+        <!-- Active -->
+        <div style="display:flex;align-items:center;gap:10px;padding:10px 12px;background:var(--amber);border-radius:8px;">
+          <span style="font-size:1rem;">▶️</span>
+          <div>
+            <div style="font-size:0.78rem;font-weight:700;color:var(--beeswax);">Module 2: Hive Setup</div>
+            <div style="font-size:0.68rem;color:rgba(62,32,0,0.6);">Lesson 2 of 4 · In progress</div>
+          </div>
+        </div>
+        <!-- Locked -->
+        <div style="display:flex;align-items:center;gap:10px;padding:10px 12px;background:var(--gray-light);border-radius:8px;opacity:0.6;">
+          <span style="font-size:1rem;">🔒</span>
+          <div>
+            <div style="font-size:0.78rem;font-weight:600;color:var(--beeswax);">Module 3: Equipment</div>
+            <div style="font-size:0.68rem;color:var(--gray-mid);">4 lessons · Locked</div>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;padding:10px 12px;background:var(--gray-light);border-radius:8px;opacity:0.6;">
+          <span style="font-size:1rem;">🔒</span>
+          <div>
+            <div style="font-size:0.78rem;font-weight:600;color:var(--beeswax);">Module 4: Inspections</div>
+            <div style="font-size:0.68rem;color:var(--gray-mid);">3 lessons · Locked</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Progress Meter -->
+      <div style="margin-top:28px;">
+        <div style="display:flex;justify-content:space-between;margin-bottom:6px;">
+          <span style="font-size:0.72rem;color:var(--mid-brown);font-weight:600;">Overall Progress</span>
+          <span style="font-size:0.72rem;font-weight:700;color:var(--honey-dark);">35%</span>
+        </div>
+        <div style="background:#EDE0CC;border-radius:999px;height:6px;overflow:hidden;">
+          <div style="background:linear-gradient(90deg,var(--amber),var(--gold));width:35%;height:100%;border-radius:999px;"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lesson Content -->
+    <div style="padding:32px 36px;">
+      <!-- Breadcrumb -->
+      <div style="font-size:0.72rem;color:var(--gray-mid);margin-bottom:20px;">
+        All Courses &nbsp;›&nbsp; Beekeeping Essentials &nbsp;›&nbsp; Module 2: Hive Setup &nbsp;›&nbsp; <strong style="color:var(--mid-brown)">Lesson 2: Choosing Your Hive Type</strong>
+      </div>
+
+      <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;">Module 2 · Lesson 2</div>
+      <h2 style="font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:var(--beeswax);margin-bottom:16px;">Choosing Your Hive Type</h2>
+
+      <div style="background:var(--honey-pale);border-radius:var(--radius);padding:20px;margin-bottom:20px;min-height:140px;display:flex;align-items:center;justify-content:center;border:1.5px dashed #EDE0CC;">
+        <div style="text-align:center;color:var(--gray-mid);">
+          <div style="font-size:2.5rem;margin-bottom:8px;">🎬</div>
+          <div style="font-size:0.82rem;">Video lesson content · 12 min</div>
+        </div>
+      </div>
+
+      <p style="font-size:0.88rem;color:var(--mid-brown);line-height:1.7;margin-bottom:20px;">Selecting the right hive type is one of the most important early decisions a beekeeper makes. In South Australia, the Langstroth hive is the most commonly used due to its modular design and compatibility with standard equipment. This lesson walks through the pros and cons of the Langstroth, Warre, and Top Bar hive styles, with guidance on which best suits a beginner in the Adelaide climate.</p>
+
+      <!-- Support Tip — Improvement #3 -->
+      <div style="margin-bottom:24px;">
+        <div class="improvement-banner" style="margin-bottom:8px;">✨ <span><strong>Improvement #3</strong> — Contextual Support Tip: appears after each lesson, linking learning to relevant support services.</span></div>
+        <div class="support-tip" style="border-radius:var(--radius);">
+          <span class="tip-icon">🌿</span>
+          <div class="tip-text"><strong>Ready to set up your hive?</strong> Book a <span class="tip-link">Mentoring at Your Apiary</span> session — Aphrodite can visit your space and guide your hive placement and setup in person. <span class="tip-link">Book now →</span></div>
+        </div>
+      </div>
+
+      <!-- Nav Controls -->
+      <div style="display:flex;justify-content:space-between;align-items:center;padding-top:16px;border-top:1.5px solid #EDE0CC;">
+        <button style="background:var(--white);border:1.5px solid #EDE0CC;border-radius:8px;padding:9px 18px;font-family:'DM Sans',sans-serif;font-size:0.83rem;font-weight:600;color:var(--mid-brown);cursor:pointer;">← Previous Lesson</button>
+        <div style="font-size:0.78rem;color:var(--gray-mid);">Lesson 2 of 4</div>
+        <button class="btn-buy" style="padding:9px 20px;font-size:0.83rem;">Mark Complete &amp; Continue →</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════════════════════════════
+     SCREEN 3 — COURSE COMPLETION
+═════════════════════════════════════════════════════════════════ -->
+<div class="screen-block" style="border-top:6px solid var(--amber);">
+  <div class="page-label">📐 Screen 3 — Course Completion &amp; Next Steps (Improved)</div>
+
+  <div class="section">
+    <div class="completion-screen">
+      <div class="completion-icon">🏆</div>
+      <h2>Congratulations!</h2>
+      <p>You've completed <strong>Beekeeping Essentials (Level 1)</strong>. You're now ready to take your apiary journey to the next stage.</p>
+
+      <div class="next-courses">
+        <div class="next-course-card recommended">
+          <div class="nc-tag">⭐ Recommended Next</div>
+          <div class="nc-name">Seasonal Hive Management — Spring & Summer</div>
+          <div style="font-size:0.75rem;margin-top:6px;color:rgba(62,32,0,0.65);">Level 2 · $159 · Jan–Apr 2026</div>
+        </div>
+        <div class="next-course-card optional">
+          <div class="nc-tag">↗ Jump Ahead</div>
+          <div class="nc-name">Getting to Grips with Varroa</div>
+          <div style="font-size:0.75rem;margin-top:6px;color:var(--gray-mid);">Level 3 · $129 · Monthly Saturdays</div>
+        </div>
+      </div>
+
+      <div class="apply-section">
+        <h4>Apply What You've Learned</h4>
+        <div class="apply-grid">
+          <div class="apply-chip">🏡 Mentoring at Apiary</div>
+          <div class="apply-chip">📞 Phone Consultation</div>
+          <div class="apply-chip">🔧 Honey Extraction Workshop</div>
+          <div class="apply-chip">📅 Varroa Training Event</div>
+        </div>
+      </div>
+
+      <!-- Improvement #8: Review Prompt -->
+      <div style="margin-bottom:8px;">
+        <div class="improvement-banner" style="text-align:left;">✨ <span><strong>Improvement #8</strong> — Google Review Prompt: surfaces at the point of highest learner satisfaction, populating the zero-rating problem on course listings.</span></div>
+      </div>
+      <div class="review-prompt">
+        ⭐ <span>Enjoyed this course? <strong>Leave Aphrodite a Google review</strong> and help the next beekeeper find their path →</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════════════════════════════
+     EVENTS PAGE (Improved)
+═════════════════════════════════════════════════════════════════ -->
+<div class="screen-block" style="border-top:6px solid var(--amber);">
+  <div class="page-label">📐 Events Page — Improved (was a near-empty dead end)</div>
+  <div class="section">
+    <div class="improvement-banner">✨ <span><strong>Improvement #4</strong> — Events now show date, description, learning-path context, and a direct registration CTA. The previous page had only a title and broken CTA buttons.</span></div>
+    <div class="section-title">Events for Beekeepers in Adelaide</div>
+    <div class="section-subtitle">Nurturing Adelaide's beekeeping community with expertise, passion, and hands-on guidance.</div>
+
+    <div class="event-card">
+      <div class="event-date-block">
+        <div class="month">Jun</div>
+        <div class="day">14</div>
+        <div class="year">2026</div>
+      </div>
+      <div class="event-body">
+        <span class="event-tag">Workshop · In-Person</span>
+        <h3>Varroa Mite Management Training</h3>
+        <p>A hands-on full-day workshop covering practical identification, monitoring techniques, and approved treatment methods for Varroa destructor in South Australian apiaries. Participants will conduct live hive inspections and receive a resource pack from Aphrodite. Limited to 12 attendees.</p>
+        <div class="event-meta">
+          <span>📍 Adelaide Hills Apiary</span>
+          <span>🕘 9:00 AM – 3:00 PM</span>
+          <span>👥 Max 12 attendees</span>
+          <span class="event-level-tag">Recommended after: Level 3 Varroa Course</span>
+        </div>
+        <div style="margin-top:16px;display:flex;gap:12px;align-items:center;">
+          <a href="#contact" class="btn-primary" style="font-size:0.82rem;padding:10px 20px;">Register Interest</a>
+          <span style="font-size:0.78rem;color:var(--mid-brown);">$0 · Free community event</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════════════════════════════
+     CONTACT / FEEDBACK FORM (Improved)
+═════════════════════════════════════════════════════════════════ -->
+<div class="feedback-section" id="contact">
+  <div class="feedback-inner">
+    <h2>🐝 Get in Touch with Aphrodite</h2>
+    <div class="sub">Whether you're booking a course, asking about support, or registering for an event — this form reaches Aphrodite directly.</div>
+
+    <!-- Improvement #5 -->
+    <div class="improvement-banner">✨ <span><strong>Improvement #5</strong> — Enquiry Type Selector added at the top. The same form now gives Aphrodite context about what the user needs, reducing back-and-forth.</span></div>
+
+    <div class="form-group">
+      <label>I'm enquiring about *</label>
+      <select>
+        <option value="">— Please select —</option>
+        <option>A Course</option>
+        <option>One-on-One Support</option>
+        <option>An Event</option>
+        <option>Something Else</option>
+      </select>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label>Your Name *</label>
+        <input type="text" placeholder="e.g. Sarah Mitchell">
+      </div>
+      <div class="form-group">
+        <label>Phone Number *</label>
+        <input type="tel" placeholder="0400 000 000">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Email Address *</label>
+      <input type="email" placeholder="you@example.com">
+    </div>
+
+    <div class="form-group">
+      <label>Tell me a little about yourself</label>
+      <textarea placeholder="Your suburb · Number of hives you have · Any previous experience with bees. This helps Aphrodite assist you better."></textarea>
+    </div>
+
+    <button class="btn-submit">Send Message 🐝</button>
+
+    <div style="text-align:center;margin-top:18px;font-size:0.78rem;color:var(--gray-mid);">
+      Or call directly: <a href="tel:0403944603" style="color:var(--honey-dark);font-weight:600;">0403 944 603</a> &nbsp;·&nbsp;
+      <a href="https://maps.app.goo.gl/4m5WNHyrgnLfA7LV8" style="color:var(--teal);">Leave a Google Review ⭐</a>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer>
+  <p>Copyright © 2026 <strong style="color:var(--amber)">Aphrodite's Harvest</strong> &nbsp;·&nbsp; Adelaide, South Australia &nbsp;·&nbsp; <a href="tel:0403944603">0403 944 603</a></p>
+  <p style="margin-top:6px;font-size:0.72rem;opacity:0.5;">UI Mockup — Educational Framework Improvement Report · Group S1-13 · Adelaide University 2026</p>
+</footer>
+
+<script>
+  function selectLevel(el) {
+    document.querySelectorAll('.level-card').forEach(c => c.classList.remove('selected'));
+    el.classList.add('selected');
+  }
+</script>
+
+</body>
+</html>
