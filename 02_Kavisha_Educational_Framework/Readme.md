@@ -2,8 +2,8 @@
 
 ## Main Contribution
 
-Educational Framework & Design Improvements for Aphrodite’s Harvest / Learn About Bees.
-Self Management Toolkit
+*Educational Framework & Design Improvements for Aphrodite’s Harvest / Learn About Bees.
+*Self Management Toolkit
 
 ## Completed Work
 
