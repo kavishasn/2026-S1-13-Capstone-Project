@@ -2,9 +2,9 @@
 
 ## Main Contribution
 
-* **High-Fidelity UI/UX Wireframe Architecture & Design Specification** for both desktop and mobile platforms.
-* **Self-Management Toolkit:** Comprehensive content Formatting, Chapter - 8
-* **Project Management, Client Liaison, & Cross-Group Program Leadership** across the 10-week lifecycle.
+* High-Fidelity UI/UX Wireframe Architecture & Design Specification for both desktop and mobile platforms.
+* Self-Management Toolkit: Comprehensive content Formatting, Chapter - 8
+* Project Management, Client Liaison, & Cross-Group Program Leadership across the 10-week lifecycle.
 
 ---
 
