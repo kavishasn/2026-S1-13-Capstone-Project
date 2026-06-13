@@ -2,15 +2,15 @@
 
 **Main Contribution**
 
-High-Fidelity UI/UX Wireframe Architecture & Design Specification for Aphrodite’s Harvest / Learn About Bees.
+* High-Fidelity UI/UX Wireframe Architecture & Design Specification for Aphrodite’s Harvest / Learn About Bees.
 
-Self-Management Toolkit (Chapter 8 )
+* Self-Management Toolkit (Chapter 8 )
 
 **Deliverables in This Folder**
 
-Interactive Figma Workspace Link (Containing both Desktop and Mobile responsive wireframes)
+* Interactive Figma Workspace Link (Containing both Desktop and Mobile responsive wireframes)
 
-Complete Website Wireframe Design Specification Document (Detailing dimensions, colors, and fonts)
+* Complete Website Wireframe Design Specification Document (Detailing dimensions, colors, and fonts)
 
 **Technical Note**
 
