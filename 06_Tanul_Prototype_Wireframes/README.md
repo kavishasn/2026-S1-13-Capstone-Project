@@ -5,6 +5,8 @@
 * High-Fidelity UI/UX Wireframe Architecture & Design Specification for Aphrodite’s Harvest / Learn About Bees.
 
 * Self-Management Toolkit (Chapter 8 )
+  
+* Team Leader (Mailing and Communication)
 
 **Deliverables in This Folder**
 
