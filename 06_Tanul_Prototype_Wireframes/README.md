@@ -10,7 +10,7 @@
 
 ## Deliverables in This Folder
 
-* Interactive Figma Workspace Link: Accessible layout designs containing both Desktop and Mobile responsive wireframes. Link to FIGMA File: https://www.figma.com/design/qTWVOX1LRsmshxx5rRgc8t/Wireframe-and-Color-Pallete-Aphrodite?node-id=0-1&p=f&t=hFdD1C38sHicsfSk-0
+* Interactive Figma Workspace Link: Accessible layout designs containing both Desktop and Mobile responsive wireframes. https://www.figma.com/design/qTWVOX1LRsmshxx5rRgc8t/Wireframe-and-Color-Pallete-Aphrodite?node-id=0-1&p=f&t=hFdD1C38sHicsfSk-0
 * Complete Website Wireframe Design Specification Document: Explaining detailed layout dimensions, HEX color codes, and font families.
 
 ---
