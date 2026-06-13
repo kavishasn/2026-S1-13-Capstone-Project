@@ -2,7 +2,7 @@
 
 ## Main Contribution
 
-* High-Fidelity UI/UX Wireframe Architecture & Design Specification for both desktop and mobile platforms.
+* Low-Fidelity UI/UX Wireframe Architecture & Design Specification for both desktop and mobile platforms.
 * Self-Management Toolkit: Comprehensive content Formatting, Chapter - 8
 * Project Management, Client Liaison, & Cross-Group Program Leadership across the 10-week lifecycle.
 
@@ -17,7 +17,9 @@
 
 ## Technical Note
 
-The wireframes and interactive layouts are high-fidelity design specifications built in Figma. They serve as responsive visual blueprints demonstrating optimal information hierarchy, mobile reflow, and user experience patterns. They are intentionally mapped to low-barrier, standard WordPress building blocks (such as Elementor columns, high-contrast text styling, and standard short description fields) so the client can easily implement them without advanced technical dependencies, coding knowledge, or external developer costs.
+## Technical Note
+
+These designs are intended to support the website self-management framework by showing how the client could organise website content using simple, low-barrier WordPress building blocks such as sections, columns, text areas, image placeholders, and call-to-action buttons. The designs are not final high-fidelity website screens, but they provide a clear visual guide for future website updates and improvements.
 
 ---
 
