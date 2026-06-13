@@ -1,4 +1,4 @@
-# Individual Contribution Statement : Tanul  Agarwal (a1974407)
+# Individual Contribution Statement : Tanul  Agarwal 
 
 ## Main Contribution
 
