@@ -1,6 +1,6 @@
 # Individual Contribution Statement
 
-**Name:** Tanul  
+**Name:** Tanul  Agarwal (a1974407)
 **Role:** Project Manager & Team Lead  
 **Group:** S1-13  
 **Project:** Aphrodite’s Harvest & LearnAboutBees  
