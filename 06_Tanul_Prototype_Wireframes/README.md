@@ -1,4 +1,4 @@
-Tanul – Individual Contribution
+**Tanul – Individual Contribution**
 
 **Main Contribution**
 
