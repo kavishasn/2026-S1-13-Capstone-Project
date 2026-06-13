@@ -3,36 +3,8 @@
 ## Main Contribution
 
 * Educational Framework & Design Improvements for Aphrodite’s Harvest / Learn About Bees.
-* Self Management Toolkit (Version 1 & Chapter 4)
-* Scrum Master
-
-## Completed Work
-
-* Live-site bottleneck analysis for Courses, Support, Events, and Contact areas
-* Four-level learning structure: Beginner, Intermediate, Specialist, and Advanced
-* Proposed Information Architecture structure for the Learn About Bees learning pathway
-* Five-Stage User Flow
-* Wireframe Screen Analysis 
-* Educational Framework Improvement Report
-* Figma recommendation design concept for the learning pathway
-* Static HTML prototype mockup developed from the Figma recommendation design
-* Prototype improvements including level selector, course descriptors, support tips, enquiry selector, and review prompt
-* WordPress/WooCommerce technical feasibility mapping
-* Created the initial structure for the Self-Management Toolkit, Version 1
-* Prepared the toolkit introduction, purpose, and objectives
-* Defined how the client should use the toolkit after project handover
-* Structured the toolkit to support independent website and digital content management
-* Integrated the Educational Framework user guidance into the toolkit (Chapter 4)
-* Connected the toolkit with practical client use, including updating course levels, course descriptions, support prompts, and website content
-* Product Review evidence presentation
-* Educational Framework content contribution for the final group presentation
-
-## Additional Contribution
-
-* Final presentation design and structure
-* Managed Jira board updates and task allocation as the Scrum Master
-* Group coordination and deliverable organisation
-* Organised individual contribution evidence for GitHub submission
+* Self Management Toolkit (Version 1 & Chapter 4 in Version 2)
+* Scrum Master (Jira Tasks creation and cordination)
   
 ## Deliverables in This Folder
 
