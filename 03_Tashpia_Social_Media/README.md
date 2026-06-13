@@ -22,7 +22,6 @@ Client Handover Pack — practical self-management toolkit
 
 Aphrodite's Harvest Digital Transformation — presentation document
 
-Section 6 — Social Media Self-Management Guide — integrated toolkit contribution
 
 
 ## Technical Note
