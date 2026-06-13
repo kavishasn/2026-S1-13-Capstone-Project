@@ -8,6 +8,9 @@ Social Media Strategy and Analysis for Aphrodite's Harvest and Learn About Bees
 
 Self-Management Toolkit — Chapter 6
 
+Work Coordination
+
+
 
 ## Deliverables in This Folder
 
