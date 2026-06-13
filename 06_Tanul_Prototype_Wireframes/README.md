@@ -1,36 +1,17 @@
-# Individual Contribution Statement
-
-**Name:** Tanul  Agarwal (a1974407)
-**Role:** Project Manager & Team Lead  
-**Group:** S1-13  
-**Project:** Aphrodite’s Harvest & LearnAboutBees  
-
----
+# Individual Contribution Statement : Tanul  Agarwal (a1974407)
 
 ## Main Contribution
 
-* **Project Management, Client Liaison, & Cross-Group Program Leadership** across the 10-week lifecycle.
 * **High-Fidelity UI/UX Wireframe Architecture & Design Specification** for both desktop and mobile platforms.
-* **Self-Management Toolkit Governance:** Comprehensive content editing, quality assurance, Chapter - 8
-* **Link to FIGMA File:** https://www.figma.com/design/qTWVOX1LRsmshxx5rRgc8t/Wireframe-and-Color-Pallete-Aphrodite?node-id=0-1&p=f&t=hFdD1C38sHicsfSk-0
-
----
-
-## Additional Contribution & Leadership
-
-* **Cross-Group Program Management:** Served as the overarching **Project Manager** overseeing **3 concurrent capstone project groups comprising 15 total personnel** (including myself), ensuring macro-alignment across all shared project milestones.
-* **Primary Client Liaison:** Acted as the central, unified point of contact between the client (Ms. Noikou) and all 15 team members to streamline requirements gathering and manage deliverables.
-* **Crisis Communication & Governance:** Maintained strict project boundaries and empathetic, professional communication channels during a critical project window when the client faced an unexpected medical emergency at home - successfully keeping all teams on track while respecting client constraints.
-* **Editorial Control & Quality Assurance:** Personally responsible for auditing, editing, and refining almost all final document submissions and toolkit iterations across the project lifecycle to ensure professional language consistency and stylistic coherence.
-* **Presentation Master:** Managed and oversaw the visual formatting, structural flow, slide design uniformity, and strict timing constraints for the team presentations.
+* **Self-Management Toolkit:** Comprehensive content Formatting, Chapter - 8
+* **Project Management, Client Liaison, & Cross-Group Program Leadership** across the 10-week lifecycle.
 
 ---
 
 ## Deliverables in This Folder
 
-1. **Comprehensive Edited Master Copy:** *Self-Management Toolkit*
-2. **Interactive Figma Workspace Link:** Accessible layout designs containing both Desktop and Mobile responsive wireframes.
-3. **Complete Website Wireframe Design Specification Document:** Explaining detailed layout dimensions, HEX color codes, and font families.
+* Interactive Figma Workspace Link: Accessible layout designs containing both Desktop and Mobile responsive wireframes. Link to FIGMA File: https://www.figma.com/design/qTWVOX1LRsmshxx5rRgc8t/Wireframe-and-Color-Pallete-Aphrodite?node-id=0-1&p=f&t=hFdD1C38sHicsfSk-0
+* Complete Website Wireframe Design Specification Document: Explaining detailed layout dimensions, HEX color codes, and font families.
 
 ---
 
