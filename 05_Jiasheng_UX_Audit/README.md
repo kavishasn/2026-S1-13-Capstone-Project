@@ -4,21 +4,6 @@
 
 - UX Audit and Website Improvement Analysis for Aphrodite’s Harvest / LearnAboutBees.
 - Competitor Website UX and Public Effectiveness Analysis.
-- Website demo design support based on UX findings and design recommendations.
-
-## Completed Work
-
-- Reviewed the current Aphrodite’s Harvest website from a UX perspective.
-- Analysed homepage layout, navigation flow, usability issues, mobile responsiveness, and overall user experience.
-- Identified key website problems, such as unclear CTA hierarchy, repeated contact sections, navigation issues, and course-page flow confusion.
-- Created a UX findings table with issue, user impact, severity level, and recommendation.
-- Reviewed 13 competitor and reference websites related to honey products, beekeeping education, local food brands, and shop-learning platforms.
-- Built a structured scoring framework for competitor analysis.
-- Evaluated competitor websites based on UX performance and public website effectiveness.
-- Used Python to support scoring analysis, data processing, ranking charts, correlation analysis, and quadrant analysis.
-- Summarised common competitor UX problems and useful design references.
-- Proposed design directions for LearnAboutBees as a combined online shop and learning resource platform.
-- Supported the website demo direction based on the UX audit and competitor analysis findings.
 
 ## Deliverables in This Folder
 
