@@ -20,9 +20,9 @@
 
 * **Cross-Group Program Management:** Served as the overarching **Project Manager** overseeing **3 concurrent capstone project groups comprising 15 total personnel** (including myself), ensuring macro-alignment across all shared project milestones.
 * **Primary Client Liaison:** Acted as the central, unified point of contact between the client (Ms. Noikou) and all 15 team members to streamline requirements gathering and manage deliverables.
-* **Crisis Communication & Governance:** Maintained strict project boundaries and empathetic, professional communication channels during a critical project window when the client faced an unexpected medical emergency at home—successfully keeping all teams on track while respecting client constraints.
+* **Crisis Communication & Governance:** Maintained strict project boundaries and empathetic, professional communication channels during a critical project window when the client faced an unexpected medical emergency at home - successfully keeping all teams on track while respecting client constraints.
 * **Editorial Control & Quality Assurance:** Personally responsible for auditing, editing, and refining almost all final document submissions and toolkit iterations across the project lifecycle to ensure professional language consistency and stylistic coherence.
-* **Presentation Master:** Managed and oversaw the visual formatting, structural flow, slide design uniformity, and strict timing constraints for the team's final presentation master slide deck.
+* **Presentation Master:** Managed and oversaw the visual formatting, structural flow, slide design uniformity, and strict timing constraints for the team presentations.
 
 ---
 
@@ -42,4 +42,4 @@ The wireframes and interactive layouts are high-fidelity design specifications b
 
 ## Client Value
 
-This work transitions the client's online presence from a scattered, hard-to-maintain digital footprint into a highly visible, connected business engine. By providing concrete social media schedules, localized search visibility strategies, and intuitive, mobile-ready layout blueprints—all while offering stable project management leadership through complex real-world client circumstances—it ensures the client can confidently scale her business and attract new students with absolute digital independence.
+This work transitions the client's online presence from a scattered, hard-to-maintain digital footprint into a highly visible, connected business engine. By providing concrete social media schedules, localized search visibility strategies, and intuitive, mobile-ready layout blueprints - all while offering stable project management leadership through complex real-world client circumstances - it ensures the client can confidently scale her business and attract new students with absolute digital independence.
