@@ -1,4 +1,4 @@
-# Individual Contribution Statement : Tanul  Agarwal 
+# Individual Contribution : Tanul  Agarwal 
 
 ## Main Contribution
 
