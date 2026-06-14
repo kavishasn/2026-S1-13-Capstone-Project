@@ -4,7 +4,7 @@
 
 * Educational Framework & Design Improvements for Aphrodite’s Harvest / Learn About Bees.
 * Self Management Toolkit (Version 1 & Chapter 4 in Version 2)
-* Scrum Master (Jira Tasks creation and Work cordination)
+* Scrum Master (Sprint Planning, task management, progress tracking, & team coordination)
   
 ## Deliverables in This Folder
 
