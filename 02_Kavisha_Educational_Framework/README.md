@@ -11,7 +11,7 @@
 * Educational Framework Improvement Report
 * Static HTML prototype mockup
 * Product Review evidence presentation
-* Figma prototype 
+* Figma prototype (Open folder to view assets)
 * Toolkit integration evidence
 
 ## Technical Note
